@@ -65,7 +65,7 @@ class PngQuant(object):
         :return:
         """
         # Pngquant Config
-        self.command_str = '{quant_file} --quality={min_quality}-{max_quality} --speed={speed} --force - < {tmp_file}'
+        self.command_str = '{quant_file} 64 --force - < {tmp_file}'
         # By default, look for binary pngquant in PATH
         self.quant_file = find_executable('pngquant') or '/usr/bin/pngquant'
         self.min_quality = 65
